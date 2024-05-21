@@ -1,0 +1,538 @@
+// colors
+// (intro and email sign up background)
+$DarkBlueemail: hsl(217, 28%, 15%);
+// (main background)
+$DarkBluebackground: hsl(218, 28%, 13%);
+// (footer background)
+$DarkBluefooter: hsl(216, 53%, 9%);
+// (testimonials background)
+$DarkBluetestimonials: hsl(219, 30%, 18%);
+// (inside call-to-action gradient)
+$Cyan: hsl(176, 68%, 64%);
+// (inside call-to-action gradient)
+$Blue: hsl(198, 60%, 50%);
+// (error)
+$LightRed : hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+$size: 14px;
+
+// Fonts
+$raleway: "Raleway", sans-serif;
+$openSans: "Open Sans", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-05 {
+    flex: 0.5;
+}
+body {
+    font-family: $openSans;
+    background-color: $DarkBlueemail;
+    header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            .links {
+                display: flex;
+                list-style: none;
+                li {
+                    margin-left: 10px;
+                    a {
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        color: rgb(255, 255, 255, 80%);
+                        transition: 0.3s;
+                        &:hover {
+                            color: rgb(255, 255, 255, 100%);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            img {
+                width: 150px;
+            }
+        }
+    }
+    main {
+        .container {
+            .landing {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 550px;
+                margin: auto;
+                text-align: center;
+                img {
+                    width: 550px;
+                }
+                h1 {
+                    color: $white;
+                    font-size: 30px;
+                    margin: 20px 0 30px 0;
+                }
+                p {
+                    color: rgb(255, 255, 255, 80%);
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+                button {
+                    margin: 20px 0;
+                    padding: 18px;
+                    width: 250px;
+                    border-radius: 30px;
+                    background-image: linear-gradient(to right, $Cyan, $Blue);
+                    color: $white;
+                    font-size: 16px;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    &:hover {
+                        background-image: linear-gradient(to right, $Cyan, $Cyan);
+                    }
+                }
+            }
+        }
+
+        .files {
+            background-color: $DarkBluebackground;
+            padding: 70px 0 70px 0;
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 50px;
+                .file {
+                    width: 350px;
+                    text-align: center;
+                    h3 {
+                        color: $white;
+                        margin: 15px 0;
+                        font-weight: 500;
+                        font-family: $raleway;
+                    }
+                    p {
+                        color: rgb(255, 255, 255, 80%);
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+        .stay {
+            background-color: $DarkBluebackground;
+            padding: 70px 0 70px 0;
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                .image {
+                    flex: 1;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .info {
+                    flex: 1;
+                    h2 {
+                        font-size: 35px;
+                        color: $white;
+                        line-height: 1;
+                        font-family: $raleway;
+                    }
+                    p {
+                        margin: 14px 0;
+                        color: rgb(255, 255, 255, 80%);
+                        font-size: $size;
+                        line-height: 1.6;
+                    }
+                    .works {
+                        display: flex;
+                        align-items: center;
+                        color: rgb(255, 255, 255, 80%);
+                        font-size: $size;
+                        cursor: pointer;
+                        width: fit-content;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgb(255, 255, 255, 80%);
+                            bottom: -5px;
+                        }
+                        img {
+                            margin-left: 8px;
+                            transition: 0.3s;
+                        }
+                        &:hover {
+                            img {
+                                transform: translateX(5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            background-color: $DarkBluebackground;
+            padding: 70px 0 240px 0;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                .testimonial {
+                    width: 330px;
+                    background-color: $DarkBluetestimonials;
+                    border-radius: 4px;
+                    padding: 30px 20px 20px 20px;
+                    p {
+                        color: rgb(255, 255, 255, 80%);
+                        font-size: $size;
+                        line-height: 1.5;
+                    }
+                    .name {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+                        img {
+                            width: 35px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                        }
+                        .info {
+                            h4 {
+                                color: $white;
+                                font-size: $size - 2px;
+                                font-weight: 600;
+                                letter-spacing: 1.5px;
+                            }
+                            span {
+                                color: rgb(255, 255, 255, 80%);
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .testimonial:nth-child(1) {
+                    position: relative;
+                    > img {
+                        position: absolute;
+                        top: -35px;
+                        left: -8px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: $DarkBluefooter;
+        padding: 90px 0;
+        position: relative;
+        .container {
+            .access {
+                position: absolute;
+                background-color: $DarkBlueemail;
+                width: 60%;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 40px 70px 30px 70px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                border-radius: 8px;
+                box-shadow: 1px 1px 10px 1px $DarkBluebackground;
+                h3 {
+                    color: $white;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 20px
+                }
+                form {
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    input {
+                        width: 400px;
+                        padding: 15px 0 15px 20px;
+                        border-radius: 25px;
+                        border: none;
+                        outline: none;
+                    }
+                    button {
+                        padding: 14px 20px;
+                        border-radius: 25px;
+                        font-size: 12px;
+                        background-color: $Blue;
+                        border: none;
+                        color: $white;
+                        letter-spacing: 0.1px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            > img {
+                width: 100px;
+                margin-bottom: 40px;
+            }
+            > div {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                p {
+                    color: rgb(255, 255, 255, 80%);
+                    font-size: $size - 1px;
+                }
+                .one {
+                    display: flex;
+                    align-items: center;
+                    flex: 1.5;
+                    > img {
+                        align-self: flex-start;
+                        margin: 6px 25px 0 0;
+                    }
+                    p {
+                        width: 300px;
+                        line-height: 1.6;
+                    }
+                }
+                .two {
+                    .phone, .email {
+                        display: flex;
+                        align-items: center;
+                        margin: 10px 0;
+                        img {
+                            width: 18px;
+                            height: 15px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                .three, .four {
+                    p {
+                        &:not(:first-child) {
+                            margin-top: 15px;
+                        }
+                        transition: 0.3s;
+                        font-weight: 600;
+                        cursor: pointer;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+                .social {
+                    i {
+                        margin-right: 10px;
+                        color: $white;
+                        border: 1px solid $white;
+                        padding: 5px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        &:nth-child(1):hover {
+                            color: #1877f2;
+                        }
+                        &:nth-child(2):hover {
+                            color: #1da1f2;
+                        }
+                        &:nth-child(3):hover {
+                            color: #c13584;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    body {
+        footer {
+            position: relative;
+            .container {
+                .access {
+                    position: absolute;
+                    padding: 10px;
+                    h3 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                    form {
+                        input {
+                            width: 200px;
+                            padding: 10px;
+                        }
+                        button {
+                            padding: 12px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        header {
+            .container {
+                > img {
+                    width: 80px;
+                }
+                .links {
+                    li {
+                        margin-right: 0px;
+                        a {
+                            padding: 2px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            .container {
+                .landing {
+                    width: 100%;
+                    > img {
+                        width: 100%;
+                    }
+                    h1 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                    button {
+                        padding: 10px;
+                        width: 170px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .files {
+                .container {
+                    .file {
+                        width: 280px;
+                        > img {
+                            width: 50px;
+                        }
+                        h3 {
+                            font-size: 18px;
+                        }
+                        p{ 
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .stay {
+                .container {
+                    flex-direction: column;
+                    .info {
+                        h2 {
+                            font-size: 25px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .testimonials {
+                .container {
+                    .testimonial {
+                        width: 280px;
+                        margin: auto;
+                        p {
+                            font-size: 12px;
+                        }
+                        .name {
+                            img {
+                                width: 30px;
+                            }
+                            .info {
+                                h4 {
+                                    font-size: 10px;
+                                }
+                                span {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            padding: 150px 0 50px 0;
+            .container {
+                .access {
+                    width: 90%;
+                    h3 {
+                        margin-bottom: 10px;
+                    }
+                    form {
+                        flex-direction: column;
+                        margin-top: 10px;
+                        input {
+                            width: 120%;
+                        }
+                        button {
+                            width: 120%;
+                        }
+                    }
+                }
+                > div {
+                    flex-direction: column;
+                    > div {
+                        margin-bottom: 20px;
+                    }
+                    .one {
+                        p {
+                            width: 100%;
+                        }
+                    }
+                    .social {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
